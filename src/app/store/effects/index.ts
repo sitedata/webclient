@@ -6,11 +6,12 @@ import { UsersEffects } from './users.effects';
 import { TimezoneEffects } from './timezone.effects';
 import { BitcoinEffects } from './bitcoin.effects';
 import { MailboxEffects } from './mailbox.effects';
+import { SharedEffects } from './shared.effects';
 
 export const effects: any[] = [
   RouterEffects, AuthEffects, BlogEffects,
   MailEffects, UsersEffects, TimezoneEffects, BitcoinEffects,
-  MailboxEffects,
+  MailboxEffects, SharedEffects,
 ];
 
 export * from './router.effect';
@@ -21,3 +22,4 @@ export * from './users.effects';
 export * from './timezone.effects';
 export * from './bitcoin.effects';
 export * from './mailbox.effects';
+export * from './shared.effects';

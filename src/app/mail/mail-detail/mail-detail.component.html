@@ -81,7 +81,10 @@
 
     <ul class="list-style-none mt-3">
       <li class="download-attachment-wrapper" *ngFor="let attachment of mail.attachments">
-        <a class="download-attachment" [href]="attachment.document" target="_blank" rel="noopener">
+        <a class="download-attachment cursor-pointer"
+           (click)="downloadFile(attachment.document)"
+           ngbTooltip="Download" target="_blank"
+           rel="noopener">
           <div class="attachment-icon">
             <i class="icon icon-attachment"></i>
           </div>

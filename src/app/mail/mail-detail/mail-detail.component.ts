@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import { AppState, MailState } from '../../store/datatypes';
 import { OnDestroy, TakeUntilDestroy } from 'ngx-take-until-destroy';
 import { OpenPgpService } from '../../store/services';
+import { DownloadFile } from '../../store/actions/shared.actions';
 
 @TakeUntilDestroy()
 @Component({
@@ -66,7 +67,11 @@ export class MailDetailComponent implements OnInit, OnDestroy {
   // }
 
   private markAsRead(mailID: number) {
-    this.store.dispatch(new ReadMail({ids: mailID.toString(), read: true}));
+    this.store.dispatch(new ReadMail({ ids: mailID.toString(), read: true }));
+  }
+
+  downloadFile(url) {
+    this.store.dispatch(new DownloadFile(url));
   }
 
   ngOnDestroy(): void {
