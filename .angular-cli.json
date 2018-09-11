@@ -10,7 +10,9 @@
       "assets": [
         "assets",
         "favicon.ico",
-        { "glob": "openpgp.min.js", "input": "../node_modules/openpgp/dist", "output": "."}
+        { "glob": "openpgp.min.js", "input": "../node_modules/openpgp/dist", "output": "."},
+        { "glob": "openpgp.compat.js", "input": "../node_modules/openpgp/dist", "output": "."},
+        { "glob": "polyfill.min.js", "input": "../node_modules/babel-polyfill/dist", "output": "."}
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -24,7 +26,9 @@
         "../node_modules/quill/dist/quill.snow.css"
       ],
       "scripts": [
+        "../node_modules/babel-polyfill/dist/polyfill.min.js",
         "../node_modules/openpgp/dist/openpgp.min.js",
+        "../node_modules/openpgp/dist/openpgp.compat.js",
         "../node_modules/quill/dist/quill.min.js",
         "../node_modules/moment/min/moment.min.js",
         "../node_modules/bcryptjs/dist/bcrypt.js"
