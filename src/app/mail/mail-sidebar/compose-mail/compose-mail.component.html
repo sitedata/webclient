@@ -403,8 +403,8 @@
               </button>
             </li>
             <li class="px-0"
-                [ngbTooltip]="!userState.isPrime && !isTrialPrimeFeaturesAvailable ? ('settings.not_with_free_acc'| translate) : ''">
-              <button *ngIf="userState.isPrime || isTrialPrimeFeaturesAvailable; else disabledDelayedDeliveryBtn"
+                [ngbTooltip]="!userState.isPrime ? ('settings.not_with_free_acc'| translate) : ''">
+              <button *ngIf="userState.isPrime; else disabledDelayedDeliveryBtn"
                       type="button" role="button" (click)="openDelayedDeliveryModal()"
                       class="actions-btn mail-self-timer-btn border-left-0  border-radius-l-0"
                       [ngClass]="{'badge badge-success text-white': delayedDelivery.value}"
@@ -419,8 +419,8 @@
               </ng-template>
             </li>
             <li class="px-0"
-                [ngbTooltip]="!userState.isPrime && !isTrialPrimeFeaturesAvailable ? ('settings.not_with_free_acc'| translate) : ''">
-              <button *ngIf="userState.isPrime || isTrialPrimeFeaturesAvailable; else disabledDeadManTimerBtn"
+                [ngbTooltip]="!userState.isPrime ? ('settings.not_with_free_acc'| translate) : ''">
+              <button *ngIf="userState.isPrime; else disabledDeadManTimerBtn"
                       type="button" role="button" (click)="openDeadManTimerModal()"
                       class="actions-btn mail-dead-btn  border-left-0  border-radius-l-0"
                       [ngClass]="{'badge badge-danger text-white': deadManTimer.value}"
