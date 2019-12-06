@@ -40,7 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     SharedModule,
     AppRoutingModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     BrowserAnimationsModule,
     NgbModule,
